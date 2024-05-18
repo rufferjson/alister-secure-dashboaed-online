@@ -4,7 +4,7 @@
 	const token = sessionStorage.getItem('token');
 	let user;
 
-	if (!token) window.location.href = 'http://localhost/alister.com';
+	if (!token) window.location.href = 'https://alista-banking-c66080ab3dc6b2ea9ad9f1d0a38763df9026d19b.vercel.app/';
 
 	var xhr = new XMLHttpRequest();
 	xhr.addEventListener('load',async function() {
@@ -13,7 +13,7 @@
 			let data = JSON.parse(xhr.response);
 			user = data.data.data;
 		} else if (xhr.status == 401) {
-			window.location.href = 'http://localhost/alister.com';
+			window.location.href = 'https://alista-banking-c66080ab3dc6b2ea9ad9f1d0a38763df9026d19b.vercel.app/';
 		} else if (xhr.status == 402) {
 
 			Swal.fire({
@@ -22,10 +22,10 @@
 			text: "Please loging!"
 			/*footer: '<a href="#">Why do I have this issue?</a>'*/
 			});
-			window.location.href = 'http://localhost/alister.com';
+			window.location.href = 'https://alista-banking-c66080ab3dc6b2ea9ad9f1d0a38763df9026d19b.vercel.app/';
 		} else {
 			console.log('Server respondend with status: ',xhr.status);
-			window.location.href = 'http://localhost/alister.com';
+			window.location.href = 'https://alista-banking-c66080ab3dc6b2ea9ad9f1d0a38763df9026d19b.vercel.app/';
 		}
 	});
 
@@ -646,7 +646,7 @@
 				minimumFractionDigits: 2,
 				maximumFractionDigits: 2
 			});
-		} else window.location.href = 'http://localhost/alister.com'; 
+		} else window.location.href = 'https://alista-banking-c66080ab3dc6b2ea9ad9f1d0a38763df9026d19b.vercel.app/'; 
     }
 
 
