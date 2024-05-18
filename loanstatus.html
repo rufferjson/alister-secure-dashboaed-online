@@ -262,176 +262,147 @@
 <main class="main-wrapper " >
 	
 		
-	<!-- ========== [ HEADER ] ========== -->
+<!-- ========== [ HEADER ] ========== -->
 	
-	<header class="header " style="background: orangered;">
+<header class="header " style="background: orangered;">
 	
-		<div class="container-fluid">
-			<div class="row align-items-center">
-			
-				<div class="col-md-6 col-6">
-					<div class="header-left d-flex align-items-center">
-												<div class="menu-toggle-btn mr-20 d-xl-none">
-							<button id="menu-toggle" class="btn btn-hover" style="color: white;font-size: 40px;">
-								<i class="bi bi-list" style=""></i>
-							</button>
-						</div>
-											</div>
-				</div>
-				
-				<div class="col-md-6 col-6">
-					<div class="header-right">
-					
-						<!-- notification start -->
-							<div class="notification-box ml-15" data-nxurl=''>
-			
-					
-			<div class='mobile d-sm-none'>
-				<a href='notifications.html'>
-								<button class="mobile-notice" type="button">
-				<i class="bi bi-bell"></i>
-									<span class='animate__animated animate__wobble animate__infinite' data-nx-count>
-						5					</span>
-							</button>
-						</a>
-			</div>
-			
-			<div class='widescreen d-none d-sm-flex'>
-			
-							<button class="dropdown-toggle" id="notification" data-bs-toggle="dropdown" aria-expanded="false" type="button">
-				<i class="bi bi-bell"></i>
-									<span class='animate__animated animate__wobble animate__infinite' data-nx-count>
-										8									
-										
-										<!-- if (mysqli_num_rows($sql) > 0) {
-											$notifications = mysqli_fetch_array($sql);	
-											if ($notifications[0] > 0) echo $notifications[0];
-											
-										} -->									
-
-										
-									</span>
-							</button>
-				
-				<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="notification" data-nx-container='header'>
-
-                        <li>
-                            <a href='receipt.html' class='unviewed' data-nx='189'>
-                                <div class='image'>
-                                    <img src='./assets/imgs/focused-businessman-looking-papers.jpg' alt='' />
-                                </div>
-                                <div class='content'>
-                                    <p>Hi Jason,
-                                    Credit 500,000 USD.<br>
-                                    Acc: **4***57* <br>
-                                    Desc: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga nulla quidem, architecto vel expedita explicabo impedit molestiae exercitationem quia asperiores earum sapiente vitae omnis officiis soluta consequatur id totam blanditiis. &hellip;</p>
-                                    <span>12:30:01 2/4/2024</span>
-                                </div>
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href='receipt.html' class='unviewed' data-nx='189'>
-                                <div class='image'>
-                                    <img src='./assets/imgs/focused-businessman-looking-papers.jpg' alt='' />
-                                </div>
-                                <div class='content'>
-                                    <p>Hi Jason,
-                                    Credit 500,000 USD.<br>
-                                    Acc: **4***57* <br>
-                                    Desc: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga nulla quidem, architecto vel expedita explicabo impedit molestiae exercitationem quia asperiores earum sapiente vitae omnis officiis soluta consequatur id totam blanditiis. &hellip;</p>
-                                    <span>12:30:01 2/4/2024</span>
-                                </div>
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href='receipt.html' class='unviewed' data-nx='189'>
-                                <div class='image'>
-                                    <img style="width: 100% !important;" src='./assets/imgs/photo.jpg' alt='' />
-                                </div>
-                                <div class='content'>
-                                    <p>Hi Jason,
-                                    Credit 500,000 USD.<br>
-                                    Acc: **4***57* <br>
-                                    Desc: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga nulla quidem, architecto vel expedita explicabo impedit molestiae exercitationem quia asperiores earum sapiente vitae omnis officiis soluta consequatur id totam blanditiis. &hellip;</p>
-                                    <span>12:30:01 2/4/2024</span>
-                                </div>
-                            </a>
-                        </li>
-
-								<!-- while($rows=mysqli_fetch_assoc($sql)) {
-									$time = time_ago($rows['date']);
-									echo("
-									<li>
-									<a href='receipt.html' class='unviewed' data-nx='189'>
-										<div class='image'>
-											<img src='../".$user['photo']."' alt='' />
-										</div>
-										<div class='content'>
-											<p>Hi ".$user['firstname'].",
-											".$rows['type']." ".$rows['amount']." USD.<br>
-											Acc: **4***57* <br>
-											Desc: ".$rows['description']."&hellip;</p>
-											<span>".$time."</span>
-										</div>
-									</a>
-								</li>						
-								"); -->						
-									
-										
-						<li>
-							<a href="notifications.html" class='d-block text-center'>
-								<small> <i class='bi bi-bell me-1'></i> View all </small>
-							</a>
-						</li>
-				</ul>
-				
-			</div>
+	<div class="container-fluid">
+		<div class="row align-items-center">
 		
-	</div>
-							
-						<!-- profile start -->
-						<div class="profile-box ml-1 ">
-						
-							<button class="dropdown-toggle bg-transparent border-0" type="button" id="profile" data-bs-toggle="dropdown" aria-expanded="false">
-								<div class="profile-info">
-									<div class="info">
-										<div class="image">
-											<img style="width: 100% !important;" src="./assets/imgs/photo.jpg" alt=""/>
-											<span class="status"></span>
+			<div class="col-md-6 col-6">
+				<div class="header-left d-flex align-items-center">
+											<div class="menu-toggle-btn mr-20 d-xl-none">
+						<button id="menu-toggle" class="btn btn-hover" style="color: white;font-size: 40px;">
+							<i class="bi bi-list"></i>
+						</button>
+					</div>
 										</div>
+			</div>
+			
+			<div class="col-md-6 col-6">
+				<div class="header-right">
+				
+					<!-- notification start -->
+						<div style="background: #000;" class="notification-box ml-15" data-nxurl=''>
+		
+				
+							<div class='mobile d-sm-none'>
+								<a href='notifications.html'>
+												<button class="mobile-notice" type="button">
+								<i class="bi bi-bell"></i>
+													<span class='animate__animated animate__wobble animate__infinite' data-nx-count>
+										5					</span>
+											</button>
+										</a>
+							</div>
+		
+							<div class='widescreen d-sm-flex' style="background: #f1f1f1;">
+							
+											<button class="dropdown-toggle" id="notification" data-bs-toggle="dropdown" aria-expanded="false" type="button">
+								<i class="bi bi-bell"></i>
+													<span id="ttlnotification" class='animate__animated animate__wobble animate__infinite'  data-nx-count>68									
+													</span>
+											</button>
+								
+								<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="notification" data-nx-container='header'>
+
+										<li>
+											<a href='receipt.html' class='unviewed' data-nx='189'>
+												<div class='image'>
+													<img class="photo" src='./assets/imgs/focused-businessman-looking-papers.jpg' alt='' />
+												</div>
+												<div class='content'>
+													<p>Hi Jason,
+													Credit 500,000 USD.<br>
+													Acc: **4***57* <br>
+													Desc: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga nulla quidem, architecto vel expedita explicabo impedit molestiae exercitationem quia asperiores earum sapiente vitae omnis officiis soluta consequatur id totam blanditiis. &hellip;</p>
+													<span>12:30:01 2/4/2024</span>
+												</div>
+											</a>
+										</li>
+
+										<li>
+											<a href='receipt.html' class='unviewed' data-nx='189'>
+												<div class='image'>
+													<img class="photo" src='./assets/imgs/focused-businessman-looking-papers.jpg' alt='' />
+												</div>
+												<div class='content'>
+													<p>Hi Jason,
+													Credit 500,000 USD.<br>
+													Acc: **4***57* <br>
+													Desc: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga nulla quidem, architecto vel expedita explicabo impedit molestiae exercitationem quia asperiores earum sapiente vitae omnis officiis soluta consequatur id totam blanditiis. &hellip;</p>
+													<span>12:30:01 2/4/2024</span>
+												</div>
+											</a>
+										</li>
+
+										<li>
+											<a href='receipt.html' class='unviewed' data-nx='189'>
+												<div class='image'>
+													<img class="photo" src='./assets/imgs/photo.jpg' alt='' />
+												</div>
+												<div class='content'>
+													<p>Hi Jason,
+													Credit 500,000 USD.<br>
+													Acc: **4***57* <br>
+													Desc: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga nulla quidem, architecto vel expedita explicabo impedit molestiae exercitationem quia asperiores earum sapiente vitae omnis officiis soluta consequatur id totam blanditiis. &hellip;</p>
+													<span>12:30:01 2/4/2024</span>
+												</div>
+											</a>
+										</li>	
+														
+										<li>
+											<a href="notifications.html" class='d-block text-center'>
+												<small> <i class='bi bi-bell me-1'></i> View all </small>
+											</a>
+										</li>
+								</ul>
+								
+							</div>
+	
+</div>
+						
+					<!-- profile start -->
+					<div class="profile-box ml-1 ">
+					
+						<button class="dropdown-toggle bg-transparent border-0" type="button" id="profile" data-bs-toggle="dropdown" aria-expanded="false">
+							<div class="profile-info">
+								<div class="info">
+									<div class="image">
+										<img style="width: 100% !important;" class="photo" src="./assets/imgs/photo.jpg" alt=""/>
+										<span class="status" ></span>
 									</div>
 								</div>
-								<i class="bi bi-chevron-down"></i>
-							</button>
-							
-							<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profile">
-																<li>
-									<div class='px-3 py-2 text-end bg-light rounded-2 fs-14px'>
-										<span class='text-success'>usertest</span>
-										<i class='bi bi-info-circle ms-1'></i>
-									</div>
+							</div>
+							<i class="bi bi-chevron-down"></i>
+						</button>
+						
+						<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profile">
+															<li>
+								<div class='px-3 py-2 text-end bg-light rounded-2 fs-14px'>
+									<span class='text-success'>usertest</span>
+									<i class='bi bi-info-circle ms-1'></i>
+								</div>
+							</li>
+																<li data-auth='logout'>
+									<a href="logout.html"> 
+										<i class="bi bi-power"></i> Sign Out 
+									</a>
 								</li>
-																	<li data-auth='logout'>
-										<a href="logout.html"> 
-											<i class="bi bi-power"></i> Sign Out 
-										</a>
-									</li>
-															</ul>
-							
-						</div>
-						<!-- profile end -->
+														</ul>
 						
 					</div>
+					<!-- profile end -->
+					
 				</div>
-				
 			</div>
+			
 		</div>
-		
-	</header>
+	</div>
 	
-	<!-- === [ content-wrapper ] === -->
+</header>
+
+<!-- === [ content-wrapper ] === -->
 	<div class='content-wrapper '>
 		
 		
@@ -583,6 +554,17 @@
 		if( $('.chat-block textarea').length ) autosize( $('.chat-block textarea') );
 	</script>
 	<script src='assets/modules/uss-support/utils/script.js'></script>	
+	<script>
+		window.onload = function() {
+			let loader = document.querySelector('#loading');
+			
+			if (user) {
+				console.log(user)
+				loader.classList.add('d-none');
+				
+			} else window.location.href = 'http://localhost/alister.com'; 
+		}
+	</script>
 
 
 </body>
