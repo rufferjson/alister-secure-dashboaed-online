@@ -6,13 +6,14 @@
 
 	if (!token) location.href = 'logout.html';
 	sessionStorage.setItem('token');
-
+	(async function() {
 	var xhr = new XMLHttpRequest();
-	xhr.addEventListener('load',async function() {
+	await xhr.addEventListener('load',function() {
 		console.log('request deliverde ....');
 		if (xhr.readyState === 4 && xhr.status === 200) {
 			let data = JSON.parse(xhr.response);
 			user = data.data.data;
+			console.log(user);
 		} else if (xhr.status == 401) {
 			location.href = 'logout.html';
 		} else if (xhr.status == 402) {
@@ -32,8 +33,9 @@
 
 	xhr.open("GET", "https://secure-server-d1ed.onrender.com/profile", true);
 	xhr.setRequestHeader("Authorization", "Bearer " + token);
-	xhr.timeout = 5000;
 	xhr.send();
+
+	})()
 
 
 	
