@@ -18,10 +18,11 @@
 
 	if (!user) {
 		(async function() {
-		let tkn = await sessionStorage.getItem('token');
+		let url = await new URL(window.location.href);
+		let token = await url.searchParams.get('token');
 		var xhr = new XMLHttpRequest();
 		await xhr.open("GET", "https://secure-server-d1ed.onrender.com/profile", true);
-		await xhr.setRequestHeader("Authorization", "Bearer " + tkn);
+		await xhr.setRequestHeader("Authorization", "Bearer " + token);
 		 await xhr.send();
 		 await xhr.addEventListener('load',function() {
 			console.log('request deliverde ....');
