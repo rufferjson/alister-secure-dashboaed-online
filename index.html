@@ -6,8 +6,8 @@
 
 	if (!bearer) {
 		(async function() {})(
-			const url = await new URL(window.location.href);
-			const token = await url.searchParams.get('token');
+			let url = await new URL(window.location.href);
+			let token = await url.searchParams.get('token');
 			sessionStorage.setItem('token',token);
 			bearer = await sessionStorage.getItem('token');
 		)
