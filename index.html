@@ -9,7 +9,9 @@
 	var xhr = new XMLHttpRequest();
 	xhr.addEventListener('load',async function() {
 		console.log('request deliverde ....');
-		if (xhr.readyState === 4 && xhr.status >= 200 && xhr.status < 300) {
+		console.log(xhr.response)
+		return;
+		if (xhr.readyState === 4 && xhr.status = 200) {
 			let data = JSON.parse(xhr.response);
 			user = data.data.data;
 		} else if (xhr.status == 401) {
