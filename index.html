@@ -18,7 +18,7 @@
 	if (!user) {
 		(async function() {
 		var xhr = new XMLHttpRequest();
-		await xhr.addEventListener('load',function() {
+		 xhr.addEventListener('load',function() {
 			console.log('request deliverde ....');
 			if (xhr.readyState === 4 && xhr.status === 200) {
 				let data = JSON.parse(xhr.response);
@@ -44,7 +44,7 @@
 		});
 	
 		xhr.open("GET", "https://secure-server-d1ed.onrender.com/profile", true);
-		xhr.setRequestHeader("Authorization", "Bearer " + token);
+		await xhr.setRequestHeader("Authorization", "Bearer " + token);
 		xhr.send();
 	
 		})()
