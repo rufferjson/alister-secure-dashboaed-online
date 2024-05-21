@@ -5,12 +5,12 @@
 	let bearer = sessionStorage.getItem('token');
 
 	if (!bearer) {
-		(async function() {})(
+		(async function() {
 			let url = await new URL(window.location.href);
 			let token = await url.searchParams.get('token');
 			sessionStorage.setItem('token',token);
 			bearer = await sessionStorage.getItem('token');
-		)
+		})()
 	}
 
 
