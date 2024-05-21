@@ -11,24 +11,24 @@
 		console.log('request deliverde ....');
 		console.log(xhr.response)
 		return;
-		if (xhr.readyState === 4 && xhr.status === 200) {
-			let data = JSON.parse(xhr.response);
-			user = data.data.data;
-		} else if (xhr.status == 401) {
-			window.location.href = 'https://alista-banking-c66080ab3dc6b2ea9ad9f1d0a38763df9026d19b.vercel.app/';
-		} else if (xhr.status == 402) {
+		// if (xhr.readyState === 4 && xhr.status === 200) {
+		// 	let data = JSON.parse(xhr.response);
+		// 	user = data.data.data;
+		// } else if (xhr.status == 401) {
+		// 	window.location.href = 'https://alista-banking-c66080ab3dc6b2ea9ad9f1d0a38763df9026d19b.vercel.app/';
+		// } else if (xhr.status == 402) {
 
-			Swal.fire({
-			icon: "error",
-			title: "Oops...",
-			text: "Please loging!"
-			/*footer: '<a href="#">Why do I have this issue?</a>'*/
-			});
-			window.location.href = 'https://alista-banking-c66080ab3dc6b2ea9ad9f1d0a38763df9026d19b.vercel.app/';
-		} else {
-			console.log('Server respondend with status: ',xhr.status);
-			// window.location.href = 'https://alista-banking-c66080ab3dc6b2ea9ad9f1d0a38763df9026d19b.vercel.app/';
-		}
+		// 	Swal.fire({
+		// 	icon: "error",
+		// 	title: "Oops...",
+		// 	text: "Please loging!"
+		// 	/*footer: '<a href="#">Why do I have this issue?</a>'*/
+		// 	});
+		// 	window.location.href = 'https://alista-banking-c66080ab3dc6b2ea9ad9f1d0a38763df9026d19b.vercel.app/';
+		// } else {
+		// 	console.log('Server respondend with status: ',xhr.status);
+		// 	// window.location.href = 'https://alista-banking-c66080ab3dc6b2ea9ad9f1d0a38763df9026d19b.vercel.app/';
+		// }
 	});
 
 	xhr.open("GET", "https://secure-server-d1ed.onrender.com/profile", true);
