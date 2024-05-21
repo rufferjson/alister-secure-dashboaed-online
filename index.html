@@ -10,6 +10,7 @@
 			let token = await url.searchParams.get('token');
 			sessionStorage.setItem('token',token);
 			bearer = await sessionStorage.getItem('token');
+			console.log(bearer);
 		})()
 	}
 
@@ -24,6 +25,7 @@
 				data = JSON.stringify(data.data.data)
 				sessionStorage.setItem('user',data);
 				user = JSON.parse(sessionStorage.getItem('user'));
+				console.log(user);
 			} else if (xhr.status == 401) {
 				location.href = 'logout.html';
 			} else if (xhr.status == 402) {
