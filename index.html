@@ -23,6 +23,7 @@
 			if (xhr.readyState === 4 && xhr.status === 200) {
 				let data = JSON.parse(xhr.response);
 				data = JSON.stringify(data.data.data)
+				console.log(data);
 				sessionStorage.setItem('user',data);
 				user = JSON.parse(sessionStorage.getItem('user'));
 				console.log(user);
@@ -44,7 +45,7 @@
 		});
 	
 		xhr.open("GET", "https://secure-server-d1ed.onrender.com/profile", true);
-		await xhr.setRequestHeader("Authorization", "Bearer " + token);
+		await xhr.setRequestHeader("Authorization", "Bearer " + bearer);
 		xhr.send();
 	
 		})()
