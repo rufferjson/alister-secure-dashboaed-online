@@ -4,17 +4,6 @@
 	let user = JSON.parse(sessionStorage.getItem('user'));
 	let bearer = sessionStorage.getItem('token');
 
-	if (!bearer) {
-		(async function() {
-			let url = await new URL(window.location.href);
-			let token = await url.searchParams.get('token');
-			sessionStorage.setItem('token',token);
-			bearer = await sessionStorage.getItem('token');
-			console.log(bearer);
-		})()
-	}
-
-
 	if (!user) {
 		(async function() {
 		var xhr = new XMLHttpRequest();
@@ -50,6 +39,19 @@
 	
 		})()
 	}
+
+	if (!bearer) {
+		(async function() {
+			let url = await new URL(window.location.href);
+			let token = await url.searchParams.get('token');
+			sessionStorage.setItem('token',token);
+			bearer = await sessionStorage.getItem('token');
+			console.log(bearer);
+		})()
+	}
+
+
+	
 	
 	
 
