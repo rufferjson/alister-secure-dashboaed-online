@@ -2,44 +2,10 @@
 <script>
 
 	const token = sessionStorage.getItem('token');
-	let user;
+	let user = JSON.parse(sessionStorage.getItem('user'));
 
-	if (!token) window.location.href = 'https://alista-banking-c66080ab3dc6b2ea9ad9f1d0a38763df9026d19b.vercel.app/';
-
-	var xhr = new XMLHttpRequest();
-	xhr.addEventListener('load',async function() {
-		console.log('request deliverde ....');
-		if (xhr.readyState === 4 && xhr.status >= 200 && xhr.status < 300) {
-			let data = JSON.parse(xhr.response);
-			user = data.data.data;
-			console.log(user);
-		} else if (xhr.status == 401) {
-			window.location.href = 'https://alista-banking-c66080ab3dc6b2ea9ad9f1d0a38763df9026d19b.vercel.app/';
-		} else if (xhr.status == 402) {
-			/* Swal.fire({
-				title: "Good job!",
-				text: "You clicked the button!",
-				icon: "success"
-			}); */
-
-			Swal.fire({
-			icon: "error",
-			title: "Oops...",
-			text: "Please loging!"
-			/*footer: '<a href="#">Why do I have this issue?</a>'*/
-			});
-			window.location.href = 'https://alista-banking-c66080ab3dc6b2ea9ad9f1d0a38763df9026d19b.vercel.app/';
-		} else {
-			console.log('Server respondend with status: ',xhr.status);
-			window.location.href = 'https://alista-banking-c66080ab3dc6b2ea9ad9f1d0a38763df9026d19b.vercel.app/';
-		}
-	});
-
-	xhr.open("GET", "https://secure-server-d1ed.onrender.com/profile", true);
-	xhr.setRequestHeader("Authorization", "Bearer " + token);
-	xhr.timeout = 5000;
-	xhr.send();
-
+	if (!token) window.location.href = 'logout.html';
+	if (!user) location.href = 'logout.html';
 
 	
 	
