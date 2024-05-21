@@ -1,41 +1,52 @@
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>
-	const url = new URL(window.location.href);
-	const token = url.searchParams.get('token');//sessionStorage.getItem('token');
-	let user;
+	
+	let user = sessionStorage.getItem('user');
+	let bearer = sessionStorage.getItem('token');
 
-	if (!token) location.href = 'logout.html';
-	sessionStorage.setItem('token',token);
-	(async function() {
-	var xhr = new XMLHttpRequest();
-	await xhr.addEventListener('load',function() {
-		console.log('request deliverde ....');
-		if (xhr.readyState === 4 && xhr.status === 200) {
-			let data = JSON.parse(xhr.response);
-			user = data.data.data;
-			console.log(user);
-		} else if (xhr.status == 401) {
-			location.href = 'logout.html';
-		} else if (xhr.status == 402) {
+	if (!bearer) {
+		const url = new URL(window.location.href);
+		const token = url.searchParams.get('token');
+		sessionStorage.setItem('token',token);
+		bearer = sessionStorage.getItem('token');
+	}
 
-			Swal.fire({
-			icon: "error",
-			title: "Oops...",
-			text: "Please loging!"
-			/*footer: '<a href="#">Why do I have this issue?</a>'*/
-			});
-			location.href = 'logout.html';
-		} else {
-			console.log('Server respondend with status: ',xhr.status);
-			location.href = 'logout.html';
-		}
-	});
 
-	xhr.open("GET", "https://secure-server-d1ed.onrender.com/profile", true);
-	xhr.setRequestHeader("Authorization", "Bearer " + token);
-	xhr.send();
-
-	})()
+	if (!user) {
+		(async function() {
+		var xhr = new XMLHttpRequest();
+		await xhr.addEventListener('load',function() {
+			console.log('request deliverde ....');
+			if (xhr.readyState === 4 && xhr.status === 200) {
+				let data = JSON.parse(xhr.response);
+				data = JSON.stringify(data.data.data)
+				sessionStorage.setItem('user',data);
+				user = JSON.parse(sessionStorage.getItem('user'));
+			} else if (xhr.status == 401) {
+				location.href = 'logout.html';
+			} else if (xhr.status == 402) {
+	
+				Swal.fire({
+				icon: "error",
+				title: "Oops...",
+				text: "Please loging!"
+				/*footer: '<a href="#">Why do I have this issue?</a>'*/
+				});
+				location.href = 'logout.html';
+			} else {
+				console.log('Server respondend with status: ',xhr.status);
+				location.href = 'logout.html';
+			}
+		});
+	
+		xhr.open("GET", "https://secure-server-d1ed.onrender.com/profile", true);
+		xhr.setRequestHeader("Authorization", "Bearer " + token);
+		xhr.send();
+	
+		})()
+	}
+	
+	
 
 
 	
