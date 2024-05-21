@@ -26,8 +26,6 @@
 		 await xhr.send();
 		 await xhr.addEventListener('load',function() {
 			console.log('request deliverde ....');
-			 console.log(xhr.response);
-			 return;
 			if (xhr.readyState === 4 && xhr.status === 200) {
 				let data = JSON.parse(xhr.response);
 				data = JSON.stringify(data.data.data)
@@ -676,7 +674,7 @@
 				minimumFractionDigits: 2,
 				maximumFractionDigits: 2
 			});
-		 } //else { location.href = 'logout.html';} 
+		 } else { location.href = 'logout.html';} 
     }
 
 
