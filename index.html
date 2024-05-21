@@ -1,7 +1,7 @@
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 <script>
 	
-	let user = sessionStorage.getItem('user');
+	let user = JSON.parse(sessionStorage.getItem('user'));
 	let bearer = sessionStorage.getItem('token');
 
 	if (!bearer) {
